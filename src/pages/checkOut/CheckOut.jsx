@@ -26,7 +26,6 @@ const CheckOut = () => {
             phone,
             message
         }
-        console.log(booking)
 
         fetch('http://localhost:5000/bookings', {
             method: 'POST',
@@ -37,7 +36,6 @@ const CheckOut = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 if (data.insertedId) {
                     alert('service booking successfully')
                 }
