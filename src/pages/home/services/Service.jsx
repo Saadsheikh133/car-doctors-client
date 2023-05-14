@@ -4,11 +4,13 @@ import ServicesCard from "./servicesCard";
 
 const Service = () => {
     const [services, setServices] = useState([]);
+
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://car-doctors-server-xi.vercel.app/services')
             .then(res => res.json())
         .then(data => setServices(data))
     }, [])
+    console.log(services)
     return (
         <div className="my-6">
             <div className="text-center space-y-5 mb-12">
